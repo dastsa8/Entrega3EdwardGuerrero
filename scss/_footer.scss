@@ -1,0 +1,28 @@
+//footer.scss
+@import 'variables';
+
+.footer {
+  background-color: $color-primario;
+  padding: $espaciado-medio 0;
+  text-align: center;
+
+  .nav {
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+
+    .nav-item {
+      display: inline-block;
+      margin-right: $espaciado-pequeno;
+
+      .nav-link {
+        color: $color-secundario;
+        font-weight: normal;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+//animations.scss
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .card {
+    @include card-hover;
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  .nav-link {
+    transition: $transition-default;
+    
+    &:hover {
+      transform: scale(1.1);
+    }
+  }

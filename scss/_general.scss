@@ -1,0 +1,114 @@
+//general.scss
+@import 'variables';
+
+body {
+  font-family: $fuente-principal;
+  margin: 0;
+  padding: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-main {
+  width: 100%;
+  max-width: 1000px;
+}
+//main.scss
+@import 'variables';
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $espaciado-grande;
+  padding: $espaciado-grande 0;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+      "image content"
+      "products products";
+  }
+}
+
+.main-image {
+  grid-area: image;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.welcome-content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: $espaciado-grande;
+  
+  h2 {
+    color: $color-texto;
+    font-size: 2rem;
+    margin-bottom: $espaciado-medio;
+  }
+  
+  p {
+    color: darken($color-texto, 10%);
+    line-height: 1.6;
+    margin-bottom: $espaciado-grande;
+  }
+  
+  .menu-btn {
+    background-color: $color-secundario;
+    color: $color-blanco;
+    border: none;
+    padding: $espaciado-pequeno $espaciado-grande;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    
+    &:hover {
+      background-color: darken($color-secundario, 10%);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.products-grid {
+  grid-area: products;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $espaciado-medio;
+  padding: $espaciado-medio;
+  
+  .product-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+    }
+    
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: $espaciado-pequeno;
+    }
+    
+    p {
+      color: $color-texto;
+      font-weight: 500;
+      margin-top: $espaciado-pequeno;
+    }
+  }
+}

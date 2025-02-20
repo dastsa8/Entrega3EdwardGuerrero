@@ -1,0 +1,70 @@
+//contact.scss
+@import 'variables';
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $espaciado-grande;
+  background-color: lighten($color-primario, 40%);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2rem;
+  color: $color-texto;
+  margin-bottom: $espaciado-grande;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $espaciado-medio;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: $espaciado-pequeno;
+
+    .form-label {
+      font-size: 1rem;
+      font-weight: bold;
+      color: darken($color-texto, 20%);
+    }
+
+    .form-control {
+      padding: $espaciado-pequeno;
+      border: 1px solid $color-gris;
+      border-radius: 5px;
+      font-size: 1rem;
+      color: $color-texto;
+
+      &:focus {
+        outline: none;
+        border-color: $color-secundario;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+      }
+    }
+
+    textarea {
+      resize: none; // Evita que el usuario cambie el tamaño del textarea
+    }
+  }
+
+  .btn {
+    background-color: $color-secundario;
+    color: $color-blanco;
+    border: none;
+    padding: $espaciado-pequeno $espaciado-grande;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: darken($color-secundario, 10%);
+      transform: translateY(-3px);
+    }
+  }
+}

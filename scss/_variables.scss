@@ -1,0 +1,25 @@
+//variables.scss
+$color-primario: #cebc9e;
+$color-secundario: #007bff;
+$color-texto: #333;
+$color-blanco: #fff;
+$color-gris: #ddd;
+
+$fuente-principal: 'Arial', sans-serif;
+
+$espaciado-pequeno: 10px;
+$espaciado-medio: 15px;
+$espaciado-grande: 30px;
+// Breakpoints
+$mobile-width: 767px;
+$tablet-width: 1023px;
+
+// Transiciones
+$transition-default: all 0.3s ease;
+
+// Z index
+$z-index: (
+  'header': 100,
+  'modal': 200,
+  'overlay': 150
+);
