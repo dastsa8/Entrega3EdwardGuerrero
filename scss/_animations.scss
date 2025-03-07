@@ -1,22 +1,23 @@
-//animations.scss
-@keyframes fadeIn {
-    from {
+@keyframes aparecer {
+  from { 
       opacity: 0;
-    }
-    to {
+      transform: translateY(20px);
+  }
+  to { 
       opacity: 1;
-    }
+      transform: translateY(0);
   }
-  
-  .card {
-    @include card-hover;
-    animation: fadeIn 0.5s ease-in;
-  }
-  
-  .nav-link {
-    transition: $transition-default;
-    
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
+}
+
+@keyframes deslizar {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.animacion-aparecer {
+  animation: aparecer 1s ease-out;
+}
+
+.animacion-deslizar {
+  animation: deslizar 0.5s ease-out;
+}

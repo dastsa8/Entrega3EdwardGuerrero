@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contáctanos para cualquier consulta, sugerencia o información sobre Café Aroma.">
-    <meta name="keywords" content="contacto, café, sugerencias, consultas, Café Aroma">
+    <meta name="description" content="Explora nuestra selección de productos exclusivos: granos de café, tazas personalizadas, máquinas de café y más.">
+    <meta name="keywords" content="productos, café, granos, tazas, máquinas, kits, accesorios">
     <meta name="author" content="Café Aroma">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="icon" href="../imagenes/favicon.ico">
-    <title>Café Aroma - Contacto</title>
+    <title>Café Aroma - Nuestros Productos</title>
     <style>
         /* Animaciones */
         @keyframes fadeIn {
@@ -22,22 +22,30 @@
             }
         }
 
-        .fade-in {
+        .product-card {
             animation: fadeIn 1s ease-in-out;
         }
 
-        /* Estilo del formulario */
-        .contact-form {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        .product-card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .product-card:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .product-card:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .product-card:nth-child(4) {
+            animation-delay: 0.8s;
         }
 
         /* Responsive ajustes */
         @media (max-width: 768px) {
-            .contact-details {
-                text-align: center;
+            .product-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -57,9 +65,9 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
-                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li>
                     <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
         </div>
@@ -67,53 +75,47 @@
 
     <!-- Encabezado -->
     <header class="bg-dark text-white text-center py-5">
-        <h1 class="display-4 fade-in">Contáctanos</h1>
-        <p class="lead fade-in">Estamos aquí para ayudarte. Envíanos tus consultas o sugerencias.</p>
+        <h1 class="display-4">Nuestros Productos</h1>
+        <p class="lead">Descubre nuestra selección de productos exclusivos para los amantes del café.</p>
     </header>
 
-    <!-- Sección de Contacto -->
+    <!-- Sección de Productos -->
     <main class="container my-5">
-        <div class="row">
-            <!-- Formulario de Contacto -->
-            <div class="col-md-6 fade-in">
-                <div class="contact-form">
-                    <h2 class="h4 mb-4">Envíanos un mensaje</h2>
-                    <form action="https://formsubmit.co/tu-email@example.com" method="POST">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-dark w-100">Enviar</button>
-                    </form>
+        <div class="product-grid d-grid gap-4" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+            <!-- Producto 1 -->
+            <div class="card product-card">
+                <img src="../imagenes/cafe.jpg" class="card-img-top" alt="Granos de café">
+                <div class="card-body">
+                    <h5 class="card-title">Granos de Café</h5>
+                    <p class="card-text">Granos seleccionados de las mejores regiones cafeteras del mundo.</p>
                 </div>
             </div>
-            <!-- Detalles de Contacto -->
-            <div class="col-md-6 fade-in contact-details">
-                <h2 class="h4 mb-4">Detalles de Contacto</h2>
-                <p><strong>📍 Dirección:</strong> Calle Principal #123</p>
-                <p><strong>📞 Teléfono:</strong> (123) 456-7890</p>
-                <p><strong>✉️ Email:</strong> info@cafearoma.com</p>
+            <!-- Producto 2 -->
+            <div class="card product-card">
+                <img src="../imagenes/tazaspersonalizadas.png" class="card-img-top" alt="Tazas personalizadas">
+                <div class="card-body">
+                    <h5 class="card-title">Tazas Personalizadas</h5>
+                    <p class="card-text">Tazas únicas para disfrutar tu café con estilo.</p>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="card product-card">
+                <img src="../imagenes/maquinacafe.jpg" class="card-img-top" alt="Máquinas de café">
+                <div class="card-body">
+                    <h5 class="card-title">Máquinas de Café</h5>
+                    <p class="card-text">Equipos de alta calidad para preparar el café perfecto en casa.</p>
+                </div>
+            </div>
+            <!-- Producto 4 -->
+            <div class="card product-card">
+                <img src="../imagenes/kitscafe.jpg" class="card-img-top" alt="Kits de café">
+                <div class="card-body">
+                    <h5 class="card-title">Kits de Café</h5>
+                    <p class="card-text">Kits especiales para regalar o disfrutar en casa.</p>
+                </div>
             </div>
         </div>
     </main>
-
-    <!-- Mapa -->
-    <section class="container my-5 fade-in">
-        <h2 class="h4 text-center mb-4">Encuéntranos</h2>
-        <div class="ratio ratio-16x9">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.419415484681!3d37.77492927975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f0e0b1b1%3A0x4a0b8f1b1b1b1b1b!2sCaf%C3%A9%20Aroma!5e0!3m2!1ses!2sus!4v1610000000000!5m2!1ses!2sus"
-                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
@@ -151,6 +153,5 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -3,66 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Cafetería Aroma</title>
+    <meta name="description" content="Cafetería artesanal con los mejores granos seleccionados y ambiente acogedor">
+    <meta name="keywords" content="café, cafetería, bebidas calientes, postres, ambiente acogedor">
+    <meta name="author" content="Tu Nombre">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="icon" href="./imagenes/favicon.ico">
+    <title>Café Aroma - Inicio</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <img src="./assets/logocafe.webp" alt="logo" class="logo">
-            <h1 class="h3">Cafetería Aroma</h1>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
+    <!-- Menú de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./imagenes/logo.WEBP" alt="Logo Café Aroma" width="50" height="50" class="d-inline-block align-text-top">
+                Café Aroma
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="./pages/menu.html">Menú</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
                 </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="container">
-        <div class="main-grid">
-            <!--principal-->
-            <div class="main-image">
-                <img src="./assets/homecafe.webp" alt="Imagen de la Cafetería" class="img-fluid img-main">
-            </div>
-            
-            <!--bienvenida-->
-            <div class="welcome-content">
-                <h2>Bienvenidos a Cafetería Aroma</h2>
-                <p>El mejor lugar para disfrutar de un café y postres deliciosos. Relájate y déjate llevar por los aromas y sabores únicos que tenemos para ti.</p>
-                <a href="./pages/menu.html">
-                    <button class="menu-btn">Ver Menú</button>
-                </a>
-            </div>
-            
-            <!--productos-->
-            <div class="products-grid">
-                <div class="product-item">
-                    <img src="./assets/cafe.jpg" alt="Café" class="img-fluid">
-                    <p>Delicioso café</p>
-                </div>
-                <div class="product-item">
-                    <img src="./assets/galletas.jpg" alt="Galletas" class="img-fluid">
-                    <p>Galletas recién horneadas</p>
-                </div>
-                <div class="product-item">
-                    <img src="./assets/pan.jpg" alt="Pan artesanal" class="img-fluid">
-                    <p>Pan artesanal</p>
-                </div>
-                <div class="product-item">
-                    <img src="./assets/postre.jpg" alt="Postres" class="img-fluid">
-                    <p>Postres exquisitos</p>
-                </div>
             </div>
         </div>
+    </nav>
+
+    <!-- Carrusel -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./imagenes/banner1.jpeg" class="d-block w-100 carousel-img" alt="Café recién preparado">
+            </div>
+            <div class="carousel-item">
+                <img src="./imagenes/banner2.jpg" class="d-block w-100 carousel-img" alt="Ambiente de la cafetería">
+            </div>
+            <div class="carousel-item">
+                <img src="./imagenes/banner3.jpg" class="d-block w-100 carousel-img" alt="Postres artesanales">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main class="container my-5">
+        <section class="row">
+            <div class="col-md-6">
+                <h1 class="display-4 mb-4">Bienvenidos a Café Aroma</h1>
+                <p class="lead">Descubre el verdadero sabor del café artesanal en un ambiente acogedor y único.</p>
+                <p>En Café Aroma, nos enorgullece ofrecer una experiencia única para los amantes del café. Nuestros granos son cuidadosamente seleccionados de las mejores regiones cafeteras del mundo y tostados a la perfección para resaltar sus características únicas.</p>
+                <p>Además de nuestro excepcional café, ofrecemos una variedad de pasteles y postres artesanales que complementan perfectamente tu experiencia cafetera.</p>
+                <a href="./pages/menu.html" class="btn btn-dark btn-lg mt-3">Ver nuestro menú</a>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Horario de Atención</h2>
+                        <p class="card-text">
+                            Lunes a Viernes: 7:00 AM - 9:00 PM<br>
+                            Sábados: 8:00 AM - 10:00 PM<br>
+                            Domingos: 9:00 AM - 8:00 PM
+                        </p>
+                        <h2 class="card-title h4 mt-4">Especialidad del Día</h2>
+                        <p class="card-text">
+                            ¡Prueba nuestro Café Especial de la Casa!<br>
+                            Preparado con granos premium y técnicas artesanales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="footer">
-        <nav>
-            <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/menu.html">Menú</a></li>
-            </ul>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="./imagenes/logo.WEBP" alt="Logo Café Aroma" width="100" height="100" class="mb-3">
+                    <p>Tu lugar favorito para disfrutar del mejor café.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="h5">Enlaces Rápidos</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="./index.html" class="text-white text-decoration-none">Inicio</a></li>
+                        <li><a href="./pages/menu.html" class="text-white text-decoration-none">Menú</a></li>
+                        <li><a href="./pages/productos.html" class="text-white text-decoration-none">Productos</a></li>
+                        <li><a href="./pages/nosotros.html" class="text-white text-decoration-none">Nosotros</a></li>
+                        <li><a href="./pages/contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="h5">Contacto</h3>
+                    <p>
+                        📍 Dirección: Calle Principal #123<br>
+                        📞 Teléfono: (123) 456-7890<br>
+                        ✉️ Email: info@cafearoma.com
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 Café Aroma. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

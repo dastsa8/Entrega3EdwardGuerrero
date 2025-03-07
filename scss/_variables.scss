@@ -1,25 +1,22 @@
-//variables.scss
-$color-primario: #cebc9e;
-$color-secundario: #007bff;
-$color-texto: #333;
-$color-blanco: #fff;
-$color-gris: #ddd;
+// Colores principales
+$color-principal: #4A3427;
+$color-secundario: #8B5E3C;
+$color-acento: #D4B59E;
+$color-texto: #333333;
+$color-fondo: #FFFFFF;
 
-$fuente-principal: 'Arial', sans-serif;
+// Espaciados
+$espaciado-xs: 0.5rem;
+$espaciado-s: 1rem;
+$espaciado-m: 2rem;
+$espaciado-l: 3rem;
 
-$espaciado-pequeno: 10px;
-$espaciado-medio: 15px;
-$espaciado-grande: 30px;
+// Fuentes
+$fuente-principal: 'Roboto', sans-serif;
+$fuente-titulos: 'Playfair Display', serif;
+
 // Breakpoints
-$mobile-width: 767px;
-$tablet-width: 1023px;
-
-// Transiciones
-$transition-default: all 0.3s ease;
-
-// Z index
-$z-index: (
-  'header': 100,
-  'modal': 200,
-  'overlay': 150
-);
+$movil: 576px;
+$tablet: 768px;
+$desktop: 992px;
+$desktop-xl: 1200px;
